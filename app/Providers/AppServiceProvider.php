@@ -29,7 +29,6 @@ class AppServiceProvider extends ServiceProvider
         Carbon::setLocale('tr');
         App::setLocale('tr');
 
-        view()->share('config', Config::find(1));
         Route::resourceVerbs([
             'create' => 'olustur',
             'edit'=> 'guncelle',
