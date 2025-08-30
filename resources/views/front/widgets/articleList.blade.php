@@ -6,7 +6,7 @@
                 <img class="mb-3 img-fluid" src="{{ $article->image }}" alt="">
                 <h3 class="post-subtitle">{!! Str::limit($article->content, 125) !!}</h3>
             </a>
-            <p class="post-meta">Kategori: <a href="#">{{ $article->getCategory->name }}</a>
+            <p class="post-meta">Kategori: <a href="{{ route('category', $article->getCategory->slug) }}">{{ $article->getCategory->name }}</a>
                 <span class="float-end">{{ $article->created_at->diffForHumans() }}</span>
             </p>
         </div>
